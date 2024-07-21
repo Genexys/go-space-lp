@@ -495,6 +495,14 @@
   }
 }
 
+/* src/components/Loader/loader.scss */
+.loader {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 31.2px;
+  color: #fff;
+}
+
 /* src/components/Footer/footer.scss */
 .footer {
   display: flex;
@@ -677,9 +685,25 @@ h6 {
 }
 
 /* src/styles/main.scss */
+html,
+body,
+#root {
+  height: 100%;
+}
 body {
   font-family: "Lato", sans-serif;
   background: var(--main-bg-color);
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.page > * {
+  flex-shrink: 0;
+}
+main {
+  flex-grow: 1;
 }
 .container {
   max-width: 1150px;

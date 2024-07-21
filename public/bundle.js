@@ -2388,9 +2388,9 @@
           if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
           }
-          var React16 = require_react();
+          var React17 = require_react();
           var Scheduler = require_scheduler();
-          var ReactSharedInternals = React16.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React17.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           var suppressWarning = false;
           function setSuppressWarning(newSuppressWarning) {
             {
@@ -3995,7 +3995,7 @@
             {
               if (props.value == null) {
                 if (typeof props.children === "object" && props.children !== null) {
-                  React16.Children.forEach(props.children, function(child) {
+                  React17.Children.forEach(props.children, function(child) {
                     if (child == null) {
                       return;
                     }
@@ -23529,11 +23529,11 @@
   });
 
   // src/index.tsx
-  var import_react15 = __toESM(require_react(), 1);
+  var import_react16 = __toESM(require_react(), 1);
   var import_client = __toESM(require_client(), 1);
 
   // src/App.tsx
-  var import_react14 = __toESM(require_react(), 1);
+  var import_react15 = __toESM(require_react(), 1);
 
   // src/components/Header/index.tsx
   var import_react6 = __toESM(require_react(), 1);
@@ -23744,7 +23744,7 @@
   };
 
   // src/components/OfferCards/index.tsx
-  var import_react10 = __toESM(require_react(), 1);
+  var import_react11 = __toESM(require_react(), 1);
 
   // src/components/Card/index.tsx
   var import_react9 = __toESM(require_react(), 1);
@@ -23752,9 +23752,15 @@
     return /* @__PURE__ */ import_react9.default.createElement("div", { className: `card card--${size}` }, /* @__PURE__ */ import_react9.default.createElement("div", { className: "card__content" }, /* @__PURE__ */ import_react9.default.createElement("h3", { className: "card__title" }, title), /* @__PURE__ */ import_react9.default.createElement("p", { className: "card__subtitle" }, subtitle), /* @__PURE__ */ import_react9.default.createElement("div", { className: "card__link" }, /* @__PURE__ */ import_react9.default.createElement(Button, { type: "outline", device: "table", text: "Learn more", href: link }))), /* @__PURE__ */ import_react9.default.createElement("img", { className: "card__image", src: imageUrl, alt: title }));
   };
 
+  // src/components/Loader/index.tsx
+  var import_react10 = __toESM(require_react(), 1);
+  var Loader = () => {
+    return /* @__PURE__ */ import_react10.default.createElement("span", { className: "loader" }, "Loading...");
+  };
+
   // src/components/OfferCards/index.tsx
   var OfferCards = ({ data, isLoading }) => {
-    return /* @__PURE__ */ import_react10.default.createElement("section", { className: "offers" }, data.length === 0 && /* @__PURE__ */ import_react10.default.createElement("h3", { className: "offers__title" }, "No offers found"), data.length > 0 && /* @__PURE__ */ import_react10.default.createElement("h3", { className: "offers__title" }, "Offers"), /* @__PURE__ */ import_react10.default.createElement("div", { className: "offers-cards" }, isLoading ? "Loading..." : data.map((offer, index) => /* @__PURE__ */ import_react10.default.createElement(
+    return /* @__PURE__ */ import_react11.default.createElement("section", { className: "offers" }, data.length === 0 && /* @__PURE__ */ import_react11.default.createElement("h3", { className: "offers__title" }, "No offers found"), data.length > 0 && /* @__PURE__ */ import_react11.default.createElement("h3", { className: "offers__title" }, "Offers"), /* @__PURE__ */ import_react11.default.createElement("div", { className: "offers-cards" }, isLoading ? /* @__PURE__ */ import_react11.default.createElement(Loader, null) : data.map((offer, index) => /* @__PURE__ */ import_react11.default.createElement(
       Card,
       {
         key: offer.id,
@@ -23765,44 +23771,44 @@
   };
 
   // src/components/Footer/index.tsx
-  var import_react11 = __toESM(require_react(), 1);
+  var import_react12 = __toESM(require_react(), 1);
 
   // src/assets/img/rocket.png
   var rocket_default = "data:image/png;base64,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";
 
   // src/components/Footer/index.tsx
   var Footer = () => {
-    return /* @__PURE__ */ import_react11.default.createElement("div", { className: "footer" }, /* @__PURE__ */ import_react11.default.createElement("div", { className: "footer__content" }, /* @__PURE__ */ import_react11.default.createElement("img", { src: rocket_default, className: "footer__logo", alt: "Rocket" }), /* @__PURE__ */ import_react11.default.createElement("p", { className: "footer__text" }, "Exciting space adventure!")));
+    return /* @__PURE__ */ import_react12.default.createElement("div", { className: "footer" }, /* @__PURE__ */ import_react12.default.createElement("div", { className: "footer__content" }, /* @__PURE__ */ import_react12.default.createElement("img", { src: rocket_default, className: "footer__logo", alt: "Rocket" }), /* @__PURE__ */ import_react12.default.createElement("p", { className: "footer__text" }, "Exciting space adventure!")));
   };
 
   // src/components/TextBlock/index.tsx
-  var import_react13 = __toESM(require_react(), 1);
+  var import_react14 = __toESM(require_react(), 1);
 
   // src/components/Link/index.tsx
-  var import_react12 = __toESM(require_react(), 1);
+  var import_react13 = __toESM(require_react(), 1);
   var Link = ({ href, text, device }) => {
-    return /* @__PURE__ */ import_react12.default.createElement("a", { href, className: `link ${device ? `link--${device}` : ""}` }, text);
+    return /* @__PURE__ */ import_react13.default.createElement("a", { href, className: `link ${device ? `link--${device}` : ""}` }, text);
   };
 
   // src/components/TextBlock/index.tsx
   var TextBlock = ({ children, title, href }) => {
-    const [deviceWidth, setDeviceWidth] = (0, import_react13.useState)(0);
+    const [deviceWidth, setDeviceWidth] = (0, import_react14.useState)(0);
     const handleResize = () => {
       setDeviceWidth(window.innerWidth);
     };
-    (0, import_react13.useEffect)(() => {
+    (0, import_react14.useEffect)(() => {
       window.addEventListener("resize", handleResize);
       return () => {
         window.removeEventListener("resize", handleResize);
       };
     }, []);
-    return /* @__PURE__ */ import_react13.default.createElement("div", { className: "text-block" }, /* @__PURE__ */ import_react13.default.createElement("h3", { className: "text-block__title" }, title), /* @__PURE__ */ import_react13.default.createElement("p", { className: "text-block__text" }, children), /* @__PURE__ */ import_react13.default.createElement("div", { className: "text-block__footer" }, href && /* @__PURE__ */ import_react13.default.createElement(Link, { href, text: "Read more", device: deviceWidth < 600 ? "mobile" : "table" })));
+    return /* @__PURE__ */ import_react14.default.createElement("div", { className: "text-block" }, /* @__PURE__ */ import_react14.default.createElement("h3", { className: "text-block__title" }, title), /* @__PURE__ */ import_react14.default.createElement("p", { className: "text-block__text" }, children), /* @__PURE__ */ import_react14.default.createElement("div", { className: "text-block__footer" }, href && /* @__PURE__ */ import_react14.default.createElement(Link, { href, text: "Read more", device: deviceWidth < 600 ? "mobile" : "table" })));
   };
 
   // src/App.tsx
   var App = () => {
-    const [offerCards, setOfferCards] = (0, import_react14.useState)([]);
-    const [isLoading, setIsLoading] = (0, import_react14.useState)(true);
+    const [offerCards, setOfferCards] = (0, import_react15.useState)([]);
+    const [isLoading, setIsLoading] = (0, import_react15.useState)(true);
     const loadCards = async () => {
       try {
         setIsLoading(true);
@@ -23814,16 +23820,16 @@
         setIsLoading(false);
       }
     };
-    (0, import_react14.useEffect)(() => {
+    (0, import_react15.useEffect)(() => {
       loadCards();
     }, []);
-    return /* @__PURE__ */ import_react14.default.createElement(import_react14.default.Fragment, null, /* @__PURE__ */ import_react14.default.createElement(Header, null), /* @__PURE__ */ import_react14.default.createElement("main", null, /* @__PURE__ */ import_react14.default.createElement(Banner, null), /* @__PURE__ */ import_react14.default.createElement("div", { className: "container main-container" }, /* @__PURE__ */ import_react14.default.createElement(OfferCards, { data: offerCards, isLoading }), /* @__PURE__ */ import_react14.default.createElement(TextBlock, { title: "Embark on a space journey", href: "/learn-more/space-exploration" }, "Travelling into space is one of the most exciting and unforgettable adventures that can change your life forever. And if you have ever dreamed of exploring stars, planets and galaxies, then our company is ready to help you realize this dream. We offer a unique experience that will allow you to go on a space journey and see all the secrets of the universe. We guarantee that every moment in space will be filled with incredible impressions, excitement and new discoveries. Our team of professionals takes care of your safety and comfort so that you can fully enjoy your adventure in space. We offer various options for space excursions."))), /* @__PURE__ */ import_react14.default.createElement(Footer, null));
+    return /* @__PURE__ */ import_react15.default.createElement("div", { className: "page" }, /* @__PURE__ */ import_react15.default.createElement(Header, null), /* @__PURE__ */ import_react15.default.createElement("main", null, /* @__PURE__ */ import_react15.default.createElement(Banner, null), /* @__PURE__ */ import_react15.default.createElement("div", { className: "container main-container" }, /* @__PURE__ */ import_react15.default.createElement(OfferCards, { data: offerCards, isLoading }), /* @__PURE__ */ import_react15.default.createElement(TextBlock, { title: "Embark on a space journey", href: "/learn-more/space-exploration" }, "Travelling into space is one of the most exciting and unforgettable adventures that can change your life forever. And if you have ever dreamed of exploring stars, planets and galaxies, then our company is ready to help you realize this dream. We offer a unique experience that will allow you to go on a space journey and see all the secrets of the universe. We guarantee that every moment in space will be filled with incredible impressions, excitement and new discoveries. Our team of professionals takes care of your safety and comfort so that you can fully enjoy your adventure in space. We offer various options for space excursions."))), /* @__PURE__ */ import_react15.default.createElement(Footer, null));
   };
   var App_default = App;
 
   // src/index.tsx
   var root = (0, import_client.createRoot)(document.getElementById("root"));
-  root.render(/* @__PURE__ */ import_react15.default.createElement(App_default, null));
+  root.render(/* @__PURE__ */ import_react16.default.createElement(App_default, null));
 })();
 /*! Bundled license information:
 

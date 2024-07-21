@@ -2,6 +2,7 @@ import React from 'react';
 import { Card } from '../Card';
 
 import './offer-cards.scss';
+import { Loader } from '../Loader';
 
 interface IOfferCardsProps {
   data: IFetchDataOffer[];
@@ -16,15 +17,17 @@ export const OfferCards: React.FC<IOfferCardsProps> = ({ data, isLoading }) => {
       {data.length > 0 && <h3 className='offers__title'>Offers</h3>}
 
       <div className='offers-cards'>
-        {isLoading
-          ? 'Loading...'
-          : data.map((offer, index) => (
-              <Card
-                key={offer.id}
-                size={index === 0 || index === data.length - 1 ? 'large' : 'small'}
-                {...offer}
-              />
-            ))}
+        {isLoading ? (
+          <Loader />
+        ) : (
+          data.map((offer, index) => (
+            <Card
+              key={offer.id}
+              size={index === 0 || index === data.length - 1 ? 'large' : 'small'}
+              {...offer}
+            />
+          ))
+        )}
       </div>
     </section>
   );

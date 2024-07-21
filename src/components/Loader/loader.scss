@@ -1,0 +1,6 @@
+@import '../../styles/mixins';
+
+.loader {
+  @include extra-bold-text-26();
+  color: #fff;
+}

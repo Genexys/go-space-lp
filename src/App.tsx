@@ -30,7 +30,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <div className='page'>
       <Header />
       <main>
         <Banner />
@@ -49,7 +49,7 @@ const App: React.FC = () => {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 
