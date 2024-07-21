@@ -2,7 +2,7 @@
 
 ## Installation
 
-Requires [Node.js](https://nodejs.org/) v18+ to run.
+Requires [Node.js](https://nodejs.org/) v20+ to run.
 
 - node 22.4.1
 - npm 10.8.1
