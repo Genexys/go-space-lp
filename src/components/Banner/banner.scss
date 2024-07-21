@@ -1,0 +1,127 @@
+@import '../../styles/mixins';
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 490px;
+  background: var(--card-gradient), url('../../assets/img/banner@2x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  @media (max-width: 1023px) {
+    height: 420px;
+  }
+
+  @media screen and (max-width: 660px) {
+    height: auto;
+    padding-bottom: 44px;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    @media screen and (max-width: 660px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    max-width: 693px;
+    width: 100%;
+    margin-right: auto;
+    padding-bottom: 28px;
+
+    @media screen and (max-width: 1023px) {
+      padding-bottom: 0;
+    }
+
+    @media screen and (max-width: 660px) {
+      justify-content: center;
+      align-items: center;
+      gap: 17px;
+      margin-top: 30px;
+      padding-top: 220px;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    @include bold-text-title();
+    color: #fff;
+
+    @media screen and (max-width: 1023px) {
+      max-width: 410px;
+      @include extra-bold-text-48();
+    }
+
+    @media screen and (max-width: 660px) {
+      max-width: 410px;
+      @include bold-text-36();
+    }
+
+    span {
+      color: var(--text-highlight);
+    }
+  }
+
+  &__text {
+    @include extra-bold-text-32();
+    color: #fff;
+
+    @media screen and (max-width: 1023px) {
+      @include bold-text-22();
+    }
+
+    @media screen and (max-width: 660px) {
+      @include extra-bold-text-16();
+    }
+
+    span {
+      color: var(--button-main);
+    }
+  }
+
+  &__image {
+    height: 100%;
+
+    @media screen and (max-width: 660px) {
+      position: absolute;
+      top: -115px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    img {
+      position: absolute;
+      top: 55%;
+      right: 10px;
+      width: 358px;
+      aspect-ratio: 1 / 1.11945;
+      transform: translateY(-50%);
+
+      @media screen and (max-width: 1023px) {
+        top: 51%;
+        right: -106px;
+        width: 332px;
+      }
+
+      @media screen and (max-width: 660px) {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: translateY(0);
+        min-width: 328px;
+      }
+    }
+  }
+}

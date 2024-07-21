@@ -1,0 +1,52 @@
+@import '../../styles/mixins';
+
+.menu__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  @include bold-text-18();
+  cursor: pointer;
+  color: #fff;
+  transition: color var(--duration-float-transition) linear;
+
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    overflow: hidden;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity var(--duration-float-transition) linear;
+    background: var(--bg-item, linear-gradient(to right, #ebff00, #ff70d9));
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  svg {
+    transition: opacity var(--duration-float-transition) linear;
+  }
+
+  &:hover {
+    color: transparent;
+
+    &::before {
+      opacity: 1;
+    }
+
+    svg {
+      opacity: 0.6;
+    }
+
+    svg stop:first-child {
+      stop-color: #ebff00;
+    }
+
+    svg stop:last-child {
+      stop-color: #ff70d9;
+    }
+  }
+}

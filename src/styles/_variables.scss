@@ -1,0 +1,17 @@
+:root {
+  --regular-color: rgba(0, 0, 0, 1);
+  --regular-color-08: rgba(0, 0, 0, 0.8);
+  --text-color-grey: rgba(255, 255, 255, 1);
+  --bg-main: rgba(48, 69, 113, 1);
+  --button-main: rgba(235, 255, 0, 1);
+  --text-highlight: rgba(255, 112, 217, 1);
+  --main-bg-color: linear-gradient(196.2deg, #0d1e48 0%, #304571 100%);
+  --card-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(15, 20, 32, 0.79) 100%);
+
+  --hover-color-menu: linear-gradient(98.25deg, #ebff00 18.56%, #ff70d9 76.02%);
+  --hover-color-menu-icon: background:
+    linear-gradient(140.47deg, rgba(235, 255, 0, 0.6) 26.02%, rgba(255, 112, 217, 0.6) 90.57%);
+  --hover-btn-color: rgba(235, 255, 0, 0.6);
+
+  --duration-float-transition: 300ms;
+}

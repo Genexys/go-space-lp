@@ -1,0 +1,14 @@
+@import '../src/styles/reset-css';
+@import '../src/styles/variables';
+@import '../src/styles/mixins.scss';
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 62px;
+  padding-block: 60px;
+
+  @media screen and (max-width: 700px) {
+    padding-block: 50px;
+  }
+}

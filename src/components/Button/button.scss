@@ -1,0 +1,43 @@
+@import '../../styles/mixins';
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 40px;
+  padding-block: 14px;
+  border-radius: 100px;
+  @include bold-text-22();
+  text-decoration: none;
+  transition: opacity var(--duration-float-transition) ease;
+  cursor: pointer;
+
+  &--outline {
+    background-color: transparent;
+    border: 2px solid var(--button-main);
+    color: var(--button-main);
+  }
+
+  &--filled {
+    background-color: var(--button-main);
+    color: var(--regular-color);
+  }
+
+  &--table {
+    @media screen and (max-width: 768px) {
+      padding-block: 7px;
+      @include extra-bold-text-16();
+    }
+  }
+
+  &--mobile {
+    @media screen and (max-width: 660px) {
+      padding-block: 7px;
+      @include extra-bold-text-16();
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

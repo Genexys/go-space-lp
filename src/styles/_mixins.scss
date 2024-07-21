@@ -1,0 +1,101 @@
+@mixin bold-text-title() {
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 72px;
+}
+
+@mixin bold-text-14() {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.8px;
+}
+
+@mixin bold-text-18() {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+}
+
+@mixin bold-text-22() {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.4px;
+}
+
+@mixin bold-text-20() {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+@mixin extra-bold-text-14() {
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 16.8px;
+}
+
+@mixin extra-bold-text-16() {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 19.2px;
+}
+
+@mixin extra-bold-text-18() {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 21.6px;
+}
+
+@mixin extra-bold-text-20() {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 24px;
+}
+
+@mixin extra-bold-text-24() {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 28.8px;
+}
+
+@mixin extra-bold-text-26() {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 31.2px;
+}
+
+@mixin extra-bold-text-32() {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 38.4px;
+}
+
+@mixin bold-text-36() {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 36px;
+}
+
+@mixin extra-bold-text-40() {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 40px;
+}
+
+@mixin extra-bold-text-46() {
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 46px;
+}
+
+@mixin extra-bold-text-48() {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 48px;
+}
+
+@mixin extra-bold-text-74() {
+  font-size: 74px;
+  font-weight: 800;
+  line-height: 74px;
+}

@@ -1,0 +1,25 @@
+@import '../../styles/mixins';
+
+.link {
+  display: inline-flex;
+  @include extra-bold-text-20();
+  text-decoration: none;
+  color: var(--button-main);
+  transition: opacity var(--duration-float-transition) ease;
+
+  &--mobile {
+    @media screen and (max-width: 1023px) {
+      @include extra-bold-text-16();
+    }
+  }
+
+  &--table {
+    @media screen and (max-width: 600px) {
+      @include extra-bold-text-14();
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
